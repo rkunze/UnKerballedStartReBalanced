@@ -1,0 +1,13 @@
+// ~/~ begin <<README.md#Extra/NerfReactionWheels.cfg.optional>>[init]
+// All reaction wheels without air intake have only 1% of their stock torque.
+// Parts with reaction wheels and air intake stay at stock torque because 
+// some helicopter rotor parts use the reaction wheel module to simulate cyclic 
+// rotor controls
+@PART[*]:HAS[@MODULE[ModuleReactionWheel],!RESOURCE[IntakeAir]]:FINAL {
+  @MODULE[ModuleReactionWheel] {
+    @PitchTorque *= 0.01
+    @YawTorque *= 0.01
+    @RollTorque *= 0.01
+  }
+}
+// ~/~ end

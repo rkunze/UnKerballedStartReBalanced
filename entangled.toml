@@ -1,0 +1,6 @@
+version = "2.0"
+# annotation = "NAKED"
+[[languages]]    
+    name = "KSP Module Manager Config"
+    identifiers = [ "cfg" ]
+    comment = { open = "//" }
