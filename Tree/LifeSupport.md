@@ -16,6 +16,6 @@ See [Early Game](./EarlyGame.cfg) for the configurations of tiers 1 through 3.
 * `evaJetpack`
   ``` { .cfg #LifeSupport file=./Tree/LifeSupport.cfg }
   @PART[evaJetpack]:NEEDS[ReStock,ReStockPlus]:AFTER[zzzUnKerballedStart] {
-      @TechRequired = flightControl
+      @TechRequired = enhancedSurvivability
   }
   ```
