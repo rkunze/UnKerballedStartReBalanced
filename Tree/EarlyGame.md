@@ -55,6 +55,16 @@ A cheap (1 science) node directly off the [_**Start**_] node with 0.625m structu
 
 ### <a name="basicRocketry"></a>_**Basic Rocketry**_ – `basicRocketry`
 [`basicRocketry`]: #basicRocketry
+* `Shrimp` Bigger solid rocket booster. \
+  Unchanged from [UnKerballed Start]. 
+* `UKSliquidEngineLVT05` First liquid engine, no gimbals \
+  Unchanged from [UnKerballed Start]. 
+* `radialEngineMini_v2`. Vernier engine, possibly inspired by [LR-101](https://en.wikipedia.org/wiki/Rocketdyne_LR-101). Provides control for early rockets.
+  ``` { .cfg #EarlyGame file=./Tree/EarlyGame.cfg }
+  @PART[radialEngineMini_v2]:NEEDS[ReStock,ReStockPlus]:AFTER[zzzUnKerballedStart] {
+      @TechRequired = basicRocketry
+  }
+  ```
 
 ### <a name="fabrication"></a>_**Fabrication**_ – `fabrication`
 [`fabrication`]: #fabrication
@@ -101,6 +111,15 @@ Miscellaneus stuff from the [Science], [Electrics], [UncrewedProbes] and [Explor
    Unchanged from [UnKerballed Start].
 
 ## Tier 3
+
+### <a name="generalRocketry"></a>_**General Rocketry**_ – `generalRocketry`
+[`generalRocketry`]: #generalRocketry
+* `sepMotor1`. Tiny solid rocket. Can be used as ullage motor.
+  ``` { .cfg #EarlyGame file=./Tree/EarlyGame.cfg }
+  @PART[sepMotor1]:NEEDS[ReStock,ReStockPlus]:AFTER[zzzUnKerballedStart] {
+      @TechRequired = generalRocketry
+  }
+  ```
 
 ### <a name="stability"></a>_**Stability**_ – `stability`
 [`stability`]: #stability
